@@ -1,0 +1,69 @@
+<resources>
+        <string name = "app_name">Android Project </string>
+        <string name = "action_settings"> Paramètres </string>
+
+       
+        <string name = "hello_blank_fragment"> Bonjour fragment vide </string>
+        <string name = "DRAWER_OPEN"> tiroir de navigation Ouvrir </string>
+        <string name = "drawer_close"> tiroir de navigation Fermer </string>
+        <string name = "navigationBarText">Barre de navigation </string>
+        <string name = "usageText"> Utiliser </string>
+        <string name = "costText"> Consommation </string>
+        <string name = "settingsText"> Paramètres </string>
+        <string name = "contactText"> Contact </string>
+        <string name = "comparisonText"> Comparaison </string>
+        <string name = "bestTariff"> bestTariffText meilleurs prix </string>
+    <string name="cost_consumption">Cost of data consumption</string>
+
+    <string name="haw">Université des Sciences Appliquées de Hambourg</string>
+    <string name="haw_department">Information et Electro Technic</string>
+
+    <string name="welcome_title">Bonjour!</string>
+    <string name="welcome_subtitle">Sil vous plaît entrer vos options tarifaires</string>
+    <string name="welcome_info">Pour forfaitaire, sil vous plaît entrez 0:</string>
+    <string name="welcome_tarif_data">Entrez Volume de données (MB) ...</string>
+    <string name="welcome_tarif_phone">Entrez le taux de téléphone (minutes) ...</string>
+    <string name="welcome_tarif_sms">taux de SMS (SMS) ...</string>
+    <string name="welcome_tarif_save">Sauvegarder</string>
+    <string name="settings_send_to_server"><a>Envoyer des données au serveur</a></string>
+    <string name="settings_language"><a>La langue:</a></string>
+    <string name="settings_select_tariff"><a>Sélectionnez le taux à appliquer :</a></string>
+
+
+    <string-array name="menu">
+               <item>Utiliser </item>
+                <item>Consommation</item>
+                <item>Paramètres </item>
+                <item>Contact </item>
+   </string-array>
+        <string-array name = "language">
+            <item>par défaut</item>
+        <item>Anglais</item>
+        <item>Allemand</item>
+      <item>Français</item>       
+    <item>Espagnol</item>
+    <item>Arabe</item>
+        </string-array>
+
+        <string-array name = "tarif">
+    <item>par défaut</item>
+        <item>Logarithmique</item>
+        <item>Linéaire</item>
+        <item>Forfait</item>
+            <item>Racine carrée</item>
+</string-array>
+    <string name="daily">Tous les jours</string>
+    <string name="weekly">Hebdomadaire</string>
+    <string name="monthly">Mensuel</string>
+    <string name="yearly">Mensuel</string>
+
+     <string name = "hours">Heures</string>
+     <string name = "days">Journées</string>
+     <string name = "month">Mois</string>
+     <string name = "cellularConsumption">Cellulaire</string>
+     <string name = "downloadData">Télécharger</string>
+     <string name = "consumptionLimit">Limite de Consommation</string>
+
+
+
+</resources>

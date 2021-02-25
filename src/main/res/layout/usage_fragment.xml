@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout2"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/toplayout"
+        android:background="#d3d3d3">
+
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:id="@+id/rightButton"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:id="@+id/leftButton"
+            android:src="@drawable/left_arrow"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <ImageButton
+            android:layout_width="199dp"
+            android:layout_height="40dp"
+            android:id="@+id/changeViewButton"
+            android:src="@drawable/button"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:id="@+id/dataDate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="#2a2b2a"
+            android:text="DDMMYY"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_below="@+id/changeViewButton"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="520dp"
+        android:background="#d3d3d3"
+        android:layout_marginTop="70dp">
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/graph"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/costFragmentCircle"
+            android:layout_centerInParent="true"
+            android:src="@drawable/circle"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="50sp"
+            android:id="@+id/totalVolumeNum"
+            android:textColor="#807f86"
+            android:paddingEnd="5sp"
+            android:paddingRight="5sp"
+            android:paddingLeft="5sp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/totalVolumeType"
+            android:layout_toStartOf="@+id/totalVolumeType" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="MB"
+            android:textSize="50sp"
+            android:id="@+id/totalVolumeType"
+            android:textColor="#807f86"
+            android:layout_marginRight="45dp"
+            android:layout_marginEnd="45dp"
+            android:layout_alignTop="@+id/totalVolumeNum"
+            android:layout_alignRight="@+id/costFragmentCircle"
+            android:layout_alignEnd="@+id/costFragmentCircle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:id="@+id/change_view_menu"
+        android:background="#edf5fe"
+        android:visibility="visible"
+        android:layout_marginTop="340dp"
+        android:clickable="false">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="@string/daily"
+            android:textSize="25sp"
+            android:textColor="#3c434e"
+            android:background="#edf5fe"
+            android:id="@+id/daily_button"
+            android:typeface="sans"
+            android:textAllCaps="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+           />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="@string/monthly"
+            android:textSize="25sp"
+            android:textColor="#3c434e"
+            android:background="#edf5fe"
+            android:id="@+id/monthly_button"
+            android:layout_below="@+id/daily_button"
+            android:layout_centerHorizontal="true"
+            android:typeface="sans"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="Accumulative"
+            android:textSize="25sp"
+            android:textColor="#3c434e"
+            android:background="#edf5fe"
+            android:id="@+id/accumulative_button"
+            android:layout_below="@+id/monthly_button"
+            android:layout_centerHorizontal="true"
+            android:typeface="sans"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/daily_button_check"
+            android:background="@drawable/check"
+            android:elevation="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="39dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginTop="18dp"
+            android:visibility="visible"
+           />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/monthly_button_check"
+            android:background="@drawable/check"
+            android:elevation="2dp"
+            android:layout_below="@+id/daily_button"
+            android:layout_alignLeft="@+id/daily_button_check"
+            android:layout_alignStart="@+id/daily_button_check"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/accumulative_button_check"
+            android:background="@drawable/check"
+            android:elevation="2dp"
+            android:layout_below="@+id/monthly_button"
+            android:layout_alignLeft="@+id/daily_button_check"
+            android:layout_alignStart="@+id/daily_button_check"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

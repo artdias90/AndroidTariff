@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout2"
+    android:background="#d3d3d3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- The ActionBar displayed at the top -->
+
+        <!-- The main content view where fragments are loaded -->
+        <RelativeLayout
+            android:id="@+id/flContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:layout_width="199dp"
+                android:layout_height="40dp"
+                android:id="@+id/changeViewButton"
+                android:src="@drawable/button"
+                android:layout_below="@+id/costOfDataConsumption"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:id="@+id/rightButton"
+                android:src="@drawable/right_arrow"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:id="@+id/leftButton"
+                android:src="@drawable/left_arrow"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:id="@+id/costOfDataConsumption"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#d3d3d3"
+            tools:context="com.example.muhmmd.andoidproject.GraphFragment"
+            android:id="@+id/frameLayout"
+            android:layout_below="@+id/flContent">
+
+            <!-- TODO: Update blank fragment layout -->
+            <com.jjoe64.graphview.GraphView
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:id="@+id/graph"
+                android:layout_gravity="center_horizontal|bottom"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/costFragmentCircle"
+                android:layout_gravity="center"
+                android:src="@drawable/circle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/totalConsumption"
+                android:layout_gravity="center" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Cost/€"
+                    android:id="@+id/costDollar"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:visibility="invisible"/>
+
+                <EditText
+                    android:id="@+id/parameter_a"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5sp"
+                    android:background="@color/background_material_light"
+                    android:layout_below="@+id/costDollar"
+                    android:hint="A.."
+                    android:inputType="number"/>
+
+                <EditText
+                    android:id="@+id/parameter_b"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/parameter_a"
+                    android:layout_marginLeft="53dp"
+                    android:padding="5sp"
+                    android:background="@color/background_material_light"
+                    android:layout_below="@+id/costDollar"
+                    android:hint="B.."
+                    android:inputType="number"/>
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:text="OK"
+                    android:layout_alignLeft="@id/parameter_b"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="24dp"
+                    android:id="@+id/confirm_parameters"
+                    android:background="@color/color_red_dark"
+                    android:textColor="@color/background_material_light"
+                    android:layout_gravity="center_horizontal" />
+
+
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/change_view_menu"
+        android:background="#d3d3d3"
+        android:visibility="gone"
+        android:layout_marginTop="335dp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="@string/daily"
+            android:textSize="25sp"
+            android:textColor="#3c434e"
+            android:background="#edf5fe"
+            android:id="@+id/daily_button"
+            android:typeface="sans"
+            android:textAllCaps="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="@string/monthly"
+            android:textSize="25sp"
+            android:textColor="#3c434e"
+            android:background="#edf5fe"
+            android:id="@+id/monthly_button"
+            android:layout_below="@+id/daily_button"
+            android:layout_centerHorizontal="true"
+            android:typeface="sans"
+            android:textAllCaps="false"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="Monthly Cost/Usage"
+            android:textSize="25sp"
+            android:textColor="#3c434e"
+            android:background="#edf5fe"
+            android:id="@+id/monthlyCostPerConsumption"
+            android:layout_below="@+id/monthly_button"
+            android:layout_centerHorizontal="true"
+            android:typeface="sans"
+            android:textAllCaps="false"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/daily_button_check"
+            android:background="@drawable/check"
+            android:elevation="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="39dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginTop="18dp"
+            android:visibility="visible"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/monthly_button_check"
+            android:background="@drawable/check"
+            android:elevation="2dp"
+            android:layout_below="@+id/daily_button"
+            android:layout_alignLeft="@+id/daily_button_check"
+            android:layout_alignStart="@+id/daily_button_check"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/monthlyCostPerConsumptionCheck"
+            android:background="@drawable/check"
+            android:elevation="2dp"
+            android:layout_below="@+id/monthly_button"
+            android:layout_alignLeft="@+id/monthly_button_check"
+            android:layout_alignStart="@+id/monthly_button_check"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

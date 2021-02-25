@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Android Project</string>
+    <string name="action_settings">Ajustes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="navigationBarText">Barra de navegación</string>
+    <string name="tariff_text">Seleccione la tarifa a aplicar</string>
+    <string name="dataToServerText">Enviar datos al servidor</string>
+    <string name="languagetext">Idiomas</string>
+    <string name="usageText">Uso</string>
+    <string name="costText">Consumo</string>
+    <string name="settingsText">Ajustes</string>
+    <string name="contactText">Contacto</string>
+    <string name="comparisonText">Comparación</string>
+    <string name="bestTariffText">Mejores Tarifas</string>
+    <string name="cost_consumption">Cost of data consumption</string>
+
+    <string name="haw">Hamburg University of Applied Science</string>
+    <string name="haw_department">Información y Electro Technic</string>
+
+    <string name="welcome_title">Bienvenido!</string>
+    <string name="welcome_subtitle">Por favor, introduzca sus opciones de tarifas</string>
+    <string name="welcome_info">Por tanto alzado, por favor, introduzca 0:</string>
+    <string name="welcome_tarif_data">Introduzca Volumen de datos (MB) ...</string>
+    <string name="welcome_tarif_phone">Introduzca el porcentaje de llamadas (minutos) ...</string>
+    <string name="welcome_tarif_sms">SMS rate(sms)...</string>
+    <string name="welcome_tarif_save">Salvar</string>
+    <string name="settings_send_to_server"><a>Enviar datos al servidor</a></string>
+    <string name="settings_language"><a>Idioma:</a></string>
+    <string name="settings_select_tariff"><a>Seleccione su Tarif:</a></string>
+
+    <string-array name="menu">
+        <item>Uso</item>
+        <item>Consumo</item>
+        <item>Ajustes</item>
+        <item>Contacto</item>
+     </string-array>
+
+    <string-array name="language">
+        <item>Defecto</item>
+        <item>Inglés</item>
+        <item>Alemán</item>
+        <item>Francés</item>
+        <item>Español</item>
+        <item>Arábica</item>
+    </string-array>
+
+    <string-array name="tariff">
+       <item name="Default">
+            Defecto
+        </item>
+        <item name="logatithmic">
+               logarítmica
+        </item>
+          <item name="linear">
+             Lineal
+        </item>
+          <item name="FLAT RATE">
+            Tarifa plana
+        </item>
+    </string-array>
+    <string name="daily">Diariamente</string>
+    <string name="weekly">Semanal</string>
+    <string name="monthly">Mensual</string>
+    <string name="yearly">Anual</string>
+
+     <string name = "hours">horas</string>
+     <string name = "days">Dias</string>
+     <string name = "month">Mes</string>
+     <string name = "cellularConsumption">Celular</string>
+     <string name = "downloadData">Descargar</string>
+     <string name = "consumptionLimit">Limitar el consumo</string>
+
+
+
+</resources>

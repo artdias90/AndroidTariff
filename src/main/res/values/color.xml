@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#302044</color>
+    <color name="colorPrimaryDark">#302044</color>
+    <color name="backgroundColor">#C5CAE9</color>
+    <color name="drawerbackgroundColor">#120B73</color>
+    <color name="contactbackgroundColor">#E0E0E0</color>
+    <color name="contactTextColor">#000</color>
+    <color name="textColorblack">#000</color>
+    <color name="settingsbackgroundColor">#FFF</color>
+
+    <color name="color_primary">#224870</color>
+    <color name="color_primary_dark">#224870</color>
+    <color name="color_primary_red">#BE0830</color>
+    <color name="color_red_dark">#8C0830</color>
+    <color name="background_color">#C5CAE9</color>
+    <color name="drawerbackground_color">#edf5fe</color>
+    <color name="contactbackground_color">#E0E0E0</color>
+    <color name="contact_text_color">#000</color>
+    <color name="settingsbackground_color">#FFF</color>
+
+    <color name="button_focused_color_start">#7FA40E</color>
+    <color name="button_focused_color_end">#79C83F</color>
+    <color name="button_normal_color_start">#1f71df</color>
+    <color name="button_normal_color_end">#619be9</color>
+    <color name="button_pressed_color_start">#7FA40E</color>
+    <color name="button_pressed_color_end">#79C83F</color>
+</resources>

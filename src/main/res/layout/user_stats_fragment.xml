@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_stats"
+    android:background="@color/contactbackgroundColor"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*">
+
+    <TableRow>
+        <TextView />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/user_data_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_data_label"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_data_value"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/user_sms_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_sms_label"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_sms_value"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/user_voice_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_voice_label"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_voice_value"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/user_voice_label"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_price_label"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/user_price_value"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_user_settings_link"
+        android:id="@+id/edit_user_settings_link"
+        android:background="#be0830"
+        android:padding="5dp"
+        android:onClick="editUserData"
+        android:layout_margin="1dp"
+        android:textColor="#edf5fe"/>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Export Analysis"
+            android:onClick="exportAnalysis"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/export_analysis_link"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:layout_span="2" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="send usage data"
+            android:onClick="sendUsage"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/get_id"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/textColorblack"
+            android:layout_column="0" />
+    </TableRow>
+
+
+
+
+</TableLayout>

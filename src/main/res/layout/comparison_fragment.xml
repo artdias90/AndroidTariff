@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout2"
+    android:background="#FFF">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="65dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/comparison_price_per_bit_label_1"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:textColor="@color/textColorblack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/comparison_price_per_bit_value"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textColor="@color/color_red_dark"
+            android:gravity="center"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comparison_price_per_bit_label_2"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:gravity="end"
+            android:textSize="18sp"
+            android:textColor="@color/textColorblack"/>
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:background="#444b55"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+
+        android:layout_marginTop="100dp">
+        <com.jjoe64.graphview.GraphView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/graph_cost"
+            android:layout_marginRight="10dp"
+            android:paddingRight="10dp"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/y_axis"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:layout_marginRight="19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/x_axis"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

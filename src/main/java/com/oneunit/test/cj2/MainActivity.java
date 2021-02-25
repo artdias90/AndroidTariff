@@ -1,0 +1,203 @@
+package com.oneunit.test.cj2;
+
+import android.app.ActionBar;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.TypefaceSpan;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
+//import com.jjoe64.graphview.GraphView;
+import android.support.v4.app.NotificationCompat;
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+
+
+    private DrawerLayout drawerLayout; //DrawerLayout variable
+    private ListView listView; //Lists of the DrawerLayout
+    private ActionBarDrawerToggle drawerListener;
+    private MyAdapter myAdapter;
+    private Context context;
+
+    private Config config;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // GraphView graph = (GraphView) findViewById(R.id.graph);
+        this.config = null;
+
+
+
+
+        listView = (ListView)findViewById(R.id.drawerList); //Initilize the list
+        //listView2 = (ListView)findViewById(R.id.drawerList2);
+        myAdapter = new MyAdapter(this);
+        listView.setAdapter(myAdapter);
+        //listView2.setAdapter(mysecondAdapter);
+        //listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, menu));
+        listView.setOnItemClickListener(this);
+        //listView2.setOnItemClickListener(this);
+        drawerLayout = (DrawerLayout)findViewById(R.id.drawerLayout); //Initilizing the drawerLayout
+        drawerListener = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close){
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                //Toast.makeText(MainActivity.this, " Drawer Opened ", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                // Toast.makeText(MainActivity.this, " Drawer Closed ", Toast.LENGTH_SHORT).show();
+            }
+        };
+        drawerLayout.setDrawerListener(drawerListener);
+
+        getSupportActionBar().setHomeButtonEnabled(true); //enables the home button...
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //enables the icon for the home button...
+
+        // Update the action bar title with the TypefaceSpan instance
+
+
+        this.context = this;
+        // register broadcast receiver
+        Intent alarm = new Intent(this.context, PlanScheduler.class);
+        // alarm flag
+        boolean alarmRunning = (PendingIntent.getBroadcast(this.context, 0, alarm, PendingIntent.FLAG_NO_CREATE) != null);
+        if (!alarmRunning){
+            PendingIntent pIntent = PendingIntent.getBroadcast(this.context, 0, alarm, 0);
+            AlarmManager alarmM = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            // start alarm every hour
+            // wake the system up
+            // use real time
+            alarmM.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(), 1000 * 60 * 60, pIntent);
+        }
+
+
+    }
+
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        drawerListener.syncState();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        //Toast.makeText(this,myAdapter.menu[position]+"was selected",Toast.LENGTH_SHORT).show();
+        selectItem(position);
+        Fragment fragment = new UsageFragment();
+        switch (position){
+            case 0:
+                fragment = new UsageFragment();
+                break;
+            case 1:
+                fragment = new CostFragment();
+                break;
+            case 2:
+                fragment = new SettingsFragment();
+                break;
+            case 3:
+                fragment = new ContactFragment();
+                break;
+            default:
+                //fragment = new UsageFragment();
+                break;
+
+        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.mainContent,fragment).commit();
+        drawerLayout.closeDrawers();
+    }
+
+    public void selectItem(int position) {
+        listView.setItemChecked(position, true);
+        setTitle(myAdapter.menu[position]);
+    }
+    public void setTitle(String title){
+        getSupportActionBar().setTitle(title);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) { //This method is used to open the drawerlayout when the hamburger icon is clicked....
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        if(drawerListener.onOptionsItemSelected(item)){
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) { //This method is used if the somethings changes in the drawerlayout for eg screen size....
+        super.onConfigurationChanged(newConfig);
+        drawerListener.onConfigurationChanged(newConfig);
+    }
+
+    public void changeLocale(String lang){
+
+    /*    Locale myLocale = new Locale("de");
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+*/
+
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        Toast.makeText(getBaseContext(), lang+" selected", Toast.LENGTH_SHORT).show();
+        Intent i = getBaseContext().getPackageManager()
+                .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
+    }
+}
